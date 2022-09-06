@@ -1,0 +1,11 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+command: >-
+  Rscript deploy.R
+code: training
+environment:
+  build:
+    path: environment
+compute: azureml:ml-poc-ccluster
+display_name: cli-job-r-deploy
+experiment_name: cli-job-r-dep
+description: deploy a random forest model on Azure container instances

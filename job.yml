@@ -1,0 +1,11 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+command: >-
+  Rscript penguins.R
+code: training
+environment:
+  build:
+    path: environment
+compute: azureml:ml-poc-ccluster
+display_name: cli-job-r
+experiment_name: cli-job-r
+description: Train a random forest model on the Palmer Penguins dataset
